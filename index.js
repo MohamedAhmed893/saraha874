@@ -18,6 +18,6 @@ app.use((err,req,res,next)=>{
     res.status(code).json({message:err.message ,statusCode:err.statusCode})
 })
 dbconnection()
-app.listen(3004,()=>{
+app.listen(process.env.PORT||3004,()=>{
     console.log("server is running ......");
 })
