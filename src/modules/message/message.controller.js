@@ -9,7 +9,7 @@ const addMessage =catchAsyncError(async (req,res,next)=>{
     const {sendTo}=req.params
     const messages=new messageModel({message,sendTo})
     await messages.save()
-    res.json({message:"success",message})
+    res.json({message:"success",messages})
 })
 
 const getAllMessage =catchAsyncError(async (req,res,next)=>{
